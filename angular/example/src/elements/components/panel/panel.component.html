@@ -1,0 +1,49 @@
+<div class="e-panel card">
+  <div class="card-body">
+
+    <!-- Desired Template  -->
+    <!--
+    <ng-content select="[head]">
+      <div *ngIf="!noHead" class="card-title">
+        <ng-content select="[title]">
+          <h6 class="mr-2">
+            <span>{{ title }}</span>
+            <ng-content select="[subtitle]">
+              <small class="px-1">{{ subtitle }}</small>
+            </ng-content>
+          </h6>
+        </ng-content>
+        <ng-content select="[actions]"></ng-content>
+      </div>
+    </ng-content>
+    <ng-content></ng-content>
+    -->
+
+    <!-- But, nesteding ng-content is not supported for now. Ugly workaround.
+         https://github.com/angular/angular/issues/12530 -->
+
+    <!-- workaround:start -->
+    <div #headContent>
+      <ng-content select="[head]"></ng-content>
+    </div>
+    <div *ngIf="headContent.children.length == 0">
+      <div *ngIf="!noHead">
+        <div class="card-title" #titleContent><ng-content select="[title]"></ng-content></div>
+        <div class="card-title" *ngIf="titleContent.children.length == 0">
+          <h6 class="mr-2">
+            <span>{{ title }}</span>
+            <span #subtitleContent>
+              <ng-content select="[subtitle]"></ng-content>
+            </span>
+            <span *ngIf="subtitleContent.children.length == 0">
+              <small class="px-1">{{ subtitle }}</small>
+            </span>
+          </h6>
+          <ng-content select="[actions]"></ng-content>
+        </div>
+      </div>
+    </div>
+    <ng-content></ng-content>
+    <!-- workaround:end -->
+  </div>
+</div>

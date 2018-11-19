@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Open Sans Font -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="styles.36d64e30e420cdafd68b.css"></head>
+<body style="overflow: hidden;">
+  <app-root id="root">
+    <div class="app-loader">
+      <div class="app-progress"></div>
+    </div>
+    <style>
+      html {
+        height: 100%;
+        font-size: 14px;
+      }
+      body {
+        min-height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 0;
+      }
+
+      #root {
+        flex-grow: 1;
+        display: flex;
+        flex-flow: column nowrap;
+      }
+
+      .app-loader {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .app-progress {
+        display: flex;
+        height: 1.5rem;
+        overflow: hidden;
+        font-size: .75rem;
+        background-color: #ffffff;
+        border-radius: 2px;
+        /* border: 1px solid #e9ecef; */
+        width: 50px;
+        box-sizing: border-box;
+      }
+      .app-progress:after {
+        content:'';
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        background-color: #59CD90;
+        background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+        background-size: 1rem 1rem;
+        animation: progress 1s linear infinite;
+        border-radius: 2px;
+      }
+      @keyframes progress {
+        from { background-position: 1rem 0; }
+        to { background-position: 0 0; }
+      }
+    </style>
+  </app-root>
+<script type="text/javascript" src="runtime.06daa30a2963fa413676.js"></script><script type="text/javascript" src="polyfills.797c19690e91af934852.js"></script><script type="text/javascript" src="main.8837227d65639200ba00.js"></script></body>
+</html>

@@ -1,0 +1,56 @@
+e-toggle bswitch .bootstrap-switch {
+  border: 0;
+  border-radius: 10.5px;
+}
+
+e-toggle bswitch .bootstrap-switch .bootstrap-switch-container {
+  font-size: 0;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+e-toggle bswitch .bootstrap-switch.bootstrap-switch-animate {
+  transition: background-color 0.2s ease-out;
+}
+
+e-toggle bswitch .bootstrap-switch.bootstrap-switch-animate .bootstrap-switch-container {
+  transition-duration: 0.2s;
+}
+
+e-toggle bswitch .bootstrap-switch .bootstrap-switch-label,
+e-toggle bswitch .bootstrap-switch .bootstrap-switch-handle-on,
+e-toggle bswitch .bootstrap-switch .bootstrap-switch-handle-off {
+  font-size: 10px;
+  padding: 0;
+  line-height: 21px;
+  color: #ffffff;
+  vertical-align: top;
+  background-color: transparent;
+}
+
+e-toggle bswitch .bootstrap-switch .bootstrap-switch-handle-on {
+  padding-left: 5px;
+}
+
+e-toggle bswitch .bootstrap-switch .bootstrap-switch-handle-off {
+  padding-right: 5px;
+}
+
+e-toggle bswitch .bootstrap-switch .bootstrap-switch-label {
+  border: 3px solid transparent;
+  border-radius: 50% !important;
+  width: 21px;
+  height: 21px;
+  background-clip: content-box;
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+  background-color: #ffffff;
+}
+
+e-toggle bswitch .bootstrap-switch-on {
+  background-color: #59CD90;
+}
+
+e-toggle bswitch .bootstrap-switch-off {
+  background-color: #adb5bd;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex">
+    <title>Elements - Web UI Components Collection</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/media/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/media/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/media/favicon/favicon-16x16.png">
+    <link rel="manifest" href="%PUBLIC_URL%/media/favicon/manifest.json">
+    <link rel="mask-icon" href="%PUBLIC_URL%/media/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/media/favicon/favicon.ico">
+    <meta name="msapplication-config" content="%PUBLIC_URL%/media/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Sans Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet" type="text/css">
+  </head>
+  <body style="overflow: hidden;">
+    <div id="root">
+      <div class="app-loader">
+        <div class="app-progress"></div>
+      </div>
+      <style>
+        html {
+          height: 100%;
+          font-size: 14px;
+        }
+        body {
+          min-height: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          margin: 0;
+        }
+
+        #root {
+          flex-grow: 1;
+          display: flex;
+          flex-flow: column nowrap;
+        }
+
+        .app-loader {
+          flex-grow: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .app-progress {
+          display: flex;
+          height: 1.5rem;
+          overflow: hidden;
+          font-size: .75rem;
+          background-color: #ffffff;
+          border-radius: 2px;
+          /* border: 1px solid #e9ecef; */
+          width: 50px;
+          box-sizing: border-box;
+        }
+        .app-progress:after {
+          content:'';
+          width: 100%;
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          background-color: #59CD90;
+          background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+          background-size: 1rem 1rem;
+          animation: progress 1s linear infinite;
+          border-radius: 2px;
+        }
+        @keyframes progress {
+          from { background-position: 1rem 0; }
+          to { background-position: 0 0; }
+        }
+      </style>
+    </div>
+  </body>
+</html>

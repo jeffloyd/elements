@@ -1,0 +1,220 @@
+e-slider .ng2-nouislider {
+  display: block;
+  margin: 0;
+  padding: 6px 0;
+  height: 16px;
+}
+
+e-slider .ng2-nouislider .noUi-target,
+e-slider .ng2-nouislider .noUi-target * {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  touch-action: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+e-slider .ng2-nouislider .noUi-target {
+  background-color: #dee2e6;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: none;
+}
+
+e-slider .ng2-nouislider .noUi-connect {
+  background: #adb5bd;
+}
+
+e-slider .ng2-nouislider .noUi-horizontal {
+  height: 4px;
+}
+
+e-slider .ng2-nouislider .noUi-horizontal .noUi-handle {
+  top: 0;
+  right: -9px;
+}
+
+e-slider .ng2-nouislider .noUi-handle {
+  width: 18px;
+  height: 18px;
+  margin-left: -9px;
+  margin-top: -7px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: solid 3px #ffffff;
+  background-color: #adb5bd;
+  box-shadow: none;
+  outline: 0;
+}
+
+e-slider .ng2-nouislider .noUi-handle:before, e-slider .ng2-nouislider .noUi-handle:after {
+  display: none;
+}
+
+e-slider .ng2-nouislider .noUi-handle:hover .noUi-tooltip, e-slider .ng2-nouislider .noUi-handle:active .noUi-tooltip {
+  opacity: 1;
+}
+
+e-slider .ng2-nouislider .noUi-tooltip {
+  font-size: 75%;
+  line-height: 1.2;
+  padding: 2px 4px;
+  border-radius: 2px;
+  border: 1px solid #adb5bd;
+  background-color: #adb5bd;
+  color: #ffffff;
+  bottom: 180%;
+  opacity: 0;
+  transition: opacity .150s ease-out;
+}
+
+e-slider .ng2-nouislider .noUi-tooltip:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  margin-left: -4px;
+  border-width: 4px 4px 0;
+  border-top-color: #adb5bd;
+  border-style: solid;
+}
+
+e-slider .ng2-nouislider.primary .noUi-connect {
+  background: #3c91da;
+}
+
+e-slider .ng2-nouislider.primary .noUi-handle {
+  background-color: #3c91da;
+}
+
+e-slider .ng2-nouislider.primary .noUi-tooltip {
+  border-color: #3c91da;
+  background-color: #3c91da;
+}
+
+e-slider .ng2-nouislider.primary .noUi-tooltip:after {
+  border-top-color: #3c91da;
+}
+
+e-slider .ng2-nouislider.secondary .noUi-connect {
+  background: #adb5bd;
+}
+
+e-slider .ng2-nouislider.secondary .noUi-handle {
+  background-color: #adb5bd;
+}
+
+e-slider .ng2-nouislider.secondary .noUi-tooltip {
+  border-color: #adb5bd;
+  background-color: #adb5bd;
+}
+
+e-slider .ng2-nouislider.secondary .noUi-tooltip:after {
+  border-top-color: #adb5bd;
+}
+
+e-slider .ng2-nouislider.success .noUi-connect {
+  background: #59CD90;
+}
+
+e-slider .ng2-nouislider.success .noUi-handle {
+  background-color: #59CD90;
+}
+
+e-slider .ng2-nouislider.success .noUi-tooltip {
+  border-color: #59CD90;
+  background-color: #59CD90;
+}
+
+e-slider .ng2-nouislider.success .noUi-tooltip:after {
+  border-top-color: #59CD90;
+}
+
+e-slider .ng2-nouislider.info .noUi-connect {
+  background: #45BDDC;
+}
+
+e-slider .ng2-nouislider.info .noUi-handle {
+  background-color: #45BDDC;
+}
+
+e-slider .ng2-nouislider.info .noUi-tooltip {
+  border-color: #45BDDC;
+  background-color: #45BDDC;
+}
+
+e-slider .ng2-nouislider.info .noUi-tooltip:after {
+  border-top-color: #45BDDC;
+}
+
+e-slider .ng2-nouislider.warning .noUi-connect {
+  background: #F7B267;
+}
+
+e-slider .ng2-nouislider.warning .noUi-handle {
+  background-color: #F7B267;
+}
+
+e-slider .ng2-nouislider.warning .noUi-tooltip {
+  border-color: #F7B267;
+  background-color: #F7B267;
+}
+
+e-slider .ng2-nouislider.warning .noUi-tooltip:after {
+  border-top-color: #F7B267;
+}
+
+e-slider .ng2-nouislider.danger .noUi-connect {
+  background: #EE6352;
+}
+
+e-slider .ng2-nouislider.danger .noUi-handle {
+  background-color: #EE6352;
+}
+
+e-slider .ng2-nouislider.danger .noUi-tooltip {
+  border-color: #EE6352;
+  background-color: #EE6352;
+}
+
+e-slider .ng2-nouislider.danger .noUi-tooltip:after {
+  border-top-color: #EE6352;
+}
+
+e-slider .ng2-nouislider.light .noUi-connect {
+  background: #f5f6f8;
+}
+
+e-slider .ng2-nouislider.light .noUi-handle {
+  background-color: #f5f6f8;
+}
+
+e-slider .ng2-nouislider.light .noUi-tooltip {
+  border-color: #f5f6f8;
+  background-color: #f5f6f8;
+}
+
+e-slider .ng2-nouislider.light .noUi-tooltip:after {
+  border-top-color: #f5f6f8;
+}
+
+e-slider .ng2-nouislider.dark .noUi-connect {
+  background: #343a40;
+}
+
+e-slider .ng2-nouislider.dark .noUi-handle {
+  background-color: #343a40;
+}
+
+e-slider .ng2-nouislider.dark .noUi-tooltip {
+  border-color: #343a40;
+  background-color: #343a40;
+}
+
+e-slider .ng2-nouislider.dark .noUi-tooltip:after {
+  border-top-color: #343a40;
+}

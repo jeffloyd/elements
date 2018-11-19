@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="e-content">
+    <div class="row">
+      <div class="col">
+        <app-navbar></app-navbar>
+      </div>
+    </div>
+    <div class="row flex-lg-nowrap">
+      <div class="d-none d-lg-block">
+        <app-sidebar>
+          <ng-content select="[sidebar]"></ng-content>
+        </app-sidebar>
+      </div>
+      <div class="col">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+</div>

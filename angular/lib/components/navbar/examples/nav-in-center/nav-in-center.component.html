@@ -1,0 +1,26 @@
+<e-navbar [class]="'px-lg-4'" [title]="'TITLE'" navInCenter={{true}}>
+  <div brand>
+    <a class="e-logo mx-4" href="" (click)="$event.preventDefault()">
+      <span>Elements <small>stay simple</small></span>
+    </a>
+  </div>
+  <div collapse>
+    <ul class="navbar-nav pt-3 pt-md-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="" (click)="$event.preventDefault()">Overview</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="" (click)="$event.preventDefault()">Bootstrap</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="" (click)="$event.preventDefault()">Pages</a>
+      </li>
+    </ul>
+  </div>
+  <div actions>
+    <button class="btn btn-success" type="button">
+      <i class="fa fa-user-circle"></i>
+      <span class="d-none d-md-inline-block">Morty Smith</span>
+    </button>
+  </div>
+</e-navbar>

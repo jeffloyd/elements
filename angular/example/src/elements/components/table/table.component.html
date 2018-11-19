@@ -1,0 +1,40 @@
+<div class="bs-table">
+  <div [class.table-responsive]="responsive">
+    <table [attr.class]="tableClass">
+      <thead>
+        <tr>
+          <th
+            *ngFor="let field of columns"
+            [attr.class]="getHeaderClass(field)"
+            (click)="sortBy(field)">
+            <ng-container *ngIf="getHeadTemplate(field.prop)">
+              <ng-container *ngTemplateOutlet="getHeadTemplate(field.prop).template"></ng-container>
+            </ng-container>
+            <span *ngIf="!getHeadTemplate(field.prop)">
+              {{ field.label ? field.label : field.prop | titlecase }}
+            </span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of paginatedItems; index as i">
+          <td
+            *ngFor="let cell of columns"
+            [attr.class]="cell.cellClass">
+            <ng-container *ngIf="getCellTemplate(cell.prop)">
+              <ng-container *ngTemplateOutlet="getCellTemplate(cell.prop).template; context: { $implicit: item, row: item, index: i }"></ng-container>
+            </ng-container>
+            <span *ngIf="!getCellTemplate(cell.prop)">{{ item[cell.prop] }}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <e-table-pagination
+    *ngIf="pagination"
+    [class]="paginationClass"
+    [page]="page"
+    (pageChange)="onPageChange($event)"
+    [perPage]="limit"
+    [total]="items.length"></e-table-pagination>
+</div>

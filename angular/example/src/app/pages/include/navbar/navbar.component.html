@@ -1,0 +1,35 @@
+<div class="my-3">
+  <e-navbar [class]="'px-lg-4'" [title]="'Dashboard'">
+    <div brand>
+      <a class="e-logo mx-4" routerLink="/pages/overview" routerLinkActive="">
+        <span>Elements <small>stay simple</small></span>
+      </a>
+    </div>
+    <div collapse>
+      <ul class="navbar-nav pt-3 pt-md-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/pages/overview" routerLinkActive="active">Overview</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/pages/users" routerLinkActive="active">CRUD</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/pages/settings" routerLinkActive="active">Settings</a>
+        </li>
+      </ul>
+    </div>
+    <div actions>
+      <a class="btn btn-success d-md-none" routerLink="/pages/settings" routerLinkActive="active">
+        <i class="fa fa-user-circle"></i>
+      </a>
+      <div class="btn-group d-none d-md-block">
+        <button class="btn btn-success">
+          <i class="fa fa-bell"></i>
+        </button>
+        <a class="btn btn-success" routerLink="/pages/settings" routerLinkActive="active">
+          <span class="mx-1">John Smith</span>
+        </a>
+      </div>
+    </div>
+  </e-navbar>
+</div>

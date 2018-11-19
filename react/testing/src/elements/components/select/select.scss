@@ -1,0 +1,246 @@
+@import "~bootstrap/scss/functions";
+@import "../../scss/bootstrap/functions";
+@import "../../scss/bootstrap/variables";
+@import "~bootstrap/scss/variables";
+
+$select-color: $input-color;
+$select-bg: $input-bg;
+$select-bg-focus: $input-focus-bg;
+$select-bg-disabled: $input-disabled-bg;
+
+$select-height: $input-height;
+$select-height-inner: $input-height-inner;
+$select-padding-y: 0.23rem;
+$select-padding-x: $input-padding-x;
+
+$select-border-width: $input-border-width;
+$select-border-radius: $input-border-radius;
+$select-border-color: $input-border-color;
+$select-border-color-focus: $input-focus-border-color;
+
+$select-placeholder-color: $input-placeholder-color;
+
+$select-box-shadow: $input-box-shadow;
+$select-box-shadow-focus: $input-focus-box-shadow;
+
+$select-tag-color: $gray-600;
+$select-tag-color-hover: $body-color;
+$select-tag-font-size: 75%;
+$select-tag-line-height: 1;
+$select-tag-bg: map-get($theme-colors, 'light');
+$select-tag-bg-hover: darken(map-get($theme-colors, 'light'), 5%);
+$select-tag-border-radius: .25em;
+$select-tag-margin-y: .23rem;
+$select-tag-margin-x: .375rem;
+$select-tag-padding-y: .38em;
+$select-tag-padding-x: .565em;
+$select-tag-border-width: 1px;
+$select-tag-border-color: rgba(0, 0, 0, 0.10);
+
+$select-arrow-width: .7rem;
+
+$select-clear-color: $gray-600;
+$select-clear-color-hover: $body-color;
+
+$select-option-color: $dropdown-link-color !default;
+$select-option-color-focus: $dropdown-link-hover-color !default;
+$select-option-color-selected: $dropdown-link-active-color !default;
+$select-option-color-disabled: $dropdown-link-disabled-color !default;
+$select-option-bg: $select-bg !default;
+$select-option-bg-focus: $dropdown-link-hover-bg !default; // pale blue
+$select-option-bg-selected: $dropdown-link-active-bg !default; // lightest blue
+$select-option-padding-y: $dropdown-item-padding-y;
+$select-option-padding-x: $dropdown-item-padding-x;
+
+.e-select {
+  & &__control {
+    border-radius: $select-border-radius;
+    border: $select-border-width solid $select-border-color;
+    min-height: $select-height;
+    background: #fff;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    &:hover {
+      border: $select-border-width solid $select-border-color;
+    }
+
+    &--is-focused, &--is-focused:hover {
+      background-color: $select-bg-focus;
+      border-color: $select-border-color-focus;
+      outline: 0;
+      box-shadow: $select-box-shadow, $select-box-shadow-focus;
+    }
+
+    &--is-disabled {
+      background-color: $select-bg-disabled;
+    }
+  }
+
+  & &__value-container {
+    padding: 0 $select-padding-x;
+    line-height: 17px;
+  }
+
+  & &__single-value {
+    margin-left: 0;
+    color: $select-color;
+  }
+
+  & &__value-container--is-multi {
+    padding: $select-padding-y $select-padding-x;
+    align-items: flex-start;
+  }
+
+  & &__multi-value {
+    border-radius: $select-tag-border-radius;
+    margin: $select-tag-margin-y $select-tag-margin-x $select-tag-margin-y 0;
+    background: $select-tag-bg;
+    border: $select-tag-border-width solid $select-tag-border-color;
+    line-height: $select-tag-line-height;
+
+    &__label {
+      color: $select-tag-color;
+      padding: $select-tag-padding-y $select-tag-padding-x;
+      font-size: $select-tag-font-size;
+    }
+
+    &__remove {
+      border-left: $select-tag-border-width solid $select-tag-border-color;
+      border-radius: 0;
+      cursor: pointer;
+
+      &:hover {
+        background: $select-tag-bg-hover;
+        color: $select-tag-color-hover;
+      }
+
+      svg {
+        height: 11px;
+        width: 11px;
+      }
+    }
+  }
+
+  & &__placeholder {
+    color: $select-placeholder-color;
+    margin: 0;
+  }
+
+  & &__input {
+    margin: 0 -2px;
+  }
+
+  & &__indicator-separator {
+    background-color: $select-border-color-focus;
+    display: none;
+  }
+
+  & &__dropdown-indicator {
+    height: $select-height-inner;
+    width: (($select-padding-x * 2) + ($select-arrow-width));
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      border-style: solid;
+      border-color: $select-placeholder-color transparent transparent;
+      border-width: ($select-arrow-width / 2) ($select-arrow-width / 2) 0;
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  & &__control--is-focused &__dropdown-indicator:after {
+    border-color: transparent transparent $select-placeholder-color;
+    border-width: 0 ($select-arrow-width / 2) ($select-arrow-width / 2);
+  }
+
+  & &__clear-indicator {
+    height: $select-height-inner;
+    width: $select-height;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    color: $select-clear-color;
+    cursor: pointer;
+
+    &:hover {
+      color: $select-clear-color-hover;
+    }
+  }
+
+  & &__option {
+    background: $select-option-bg;
+    color: $select-option-color;
+    padding: $select-option-padding-y $select-option-padding-x;
+
+    &--is-focused, &:active {
+      background: $select-option-bg-focus;
+      color: $select-option-color-focus;
+    }
+
+    &--is-selected {
+      background: $select-option-bg-selected;
+      color: $select-option-color-selected;
+    }
+
+    &--is-disabled {
+      color: $select-option-color-disabled;
+    }
+  }
+}
+
+// @import "~react-select/scss/control";
+// @import "~react-select/scss/menu";
+// @import "~react-select/scss/mixins";
+// @import "~react-select/scss/multi";
+// @import "~react-select/scss/spinner";
+//
+// .Select {
+//   &.is-open > .Select-control {
+//     border-color: $select-input-border-color;
+//
+//     .Select-arrow {
+// 			top: -$select-arrow-width;
+// 		}
+//   }
+// }
+//
+// .Select-input {
+//   height: calc(#{$select-input-internal-height} - 1px);
+//
+//   & > input {
+//     line-height: $select-input-internal-height;
+//     padding: 0;
+//   }
+// }
+//
+// .Select-option {
+//   &.is-selected {
+// 		background-color: $select-option-selected-bg;
+// 		color: $select-option-selected-color;
+// 	}
+// }
+//
+// .Select--multi {
+//   .Select-value {
+//     line-height: 1;
+//     display: inline-flex;
+//     flex-direction: row-reverse;
+//   }
+//
+//   .Select-value-icon {
+// 		padding: $select-item-padding-vertical $select-item-padding-horizontal;
+//     border-left: 1px solid $select-item-border-color;
+//     border-top-right-radius: $select-item-border-radius;
+//     border-bottom-right-radius: $select-item-border-radius;
+//     border-top-left-radius: 0;
+//     border-bottom-left-radius: 0;
+//     border-right: 0;
+//   }
+// }

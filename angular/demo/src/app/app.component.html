@@ -1,0 +1,33 @@
+<div class="app-wrapper">
+  <div class="app-tabs">
+    <div class="container">
+      <div class="px-sm-3">
+        <ul class="nav nav-tabs flex-nowrap">
+          <li class="nav-item position-relative">
+            <a routerLink="/pages" routerLinkActive="active" class="nav-link px-2 px-sm-3 pr-3 py-1 py-sm-2">
+              <span class="pr-2">Pages</span>
+            </a>
+            <div class="demo-tabs-dropdown" ngbDropdown>
+              <div class="my-1 my-sm-2 p-0 px-1 caret" ngbDropdownToggle></div>
+              <div ngbDropdownMenu>
+                <div class="dropdown-header">Pages List:</div>
+                <a routerLink="/pages/overview" routerLinkActive="active" class="dropdown-item">Overview</a>
+                <a routerLink="/pages/users" routerLinkActive="active" class="dropdown-item">Users</a>
+                <a routerLink="/pages/settings" routerLinkActive="active" class="dropdown-item">Profile</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/components" routerLinkActive="active" class="nav-link px-2 px-sm-3 py-1 py-sm-2">Components</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/bootstrap" routerLinkActive="active" class="nav-link px-2 px-sm-3 py-1 py-sm-2">Bootstrap</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

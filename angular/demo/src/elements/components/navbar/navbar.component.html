@@ -1,0 +1,24 @@
+<nav
+  class="e-navbar navbar navbar-expand-md card"
+  [ngClass]="classNames">
+  <div class="e-navbar__cont flex-md-nowrap py-2">
+    <!-- Menu Toggle Button -->
+    <button class="navbar-toggler btn" type="button" (click)="isCollapsed = !isCollapsed">
+      <span class="fa fa-bars"></span>
+    </button>
+    <!-- Brand (Logo, optional) -->
+    <div class="navbar-brand d-none d-md-block">
+      <ng-content select="[brand]"></ng-content>
+    </div>
+    <!-- Page Title (collapsed state only, optional) -->
+    <div class="e-navbar__title navbar-text d-md-none my-2">{{ title }}</div>
+    <!-- Menu -->
+    <div class="e-navbar__nav navbar-collapse order-4 order-md-2" [ngbCollapse]="isCollapsed">
+      <ng-content select="[collapse]"></ng-content>
+    </div>
+    <!-- Navbar Actions (optional) -->
+    <div class="e-navbar__actions ml-3">
+      <ng-content select="[actions]"></ng-content>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,49 @@
+@import "../../scss/bootstrap/variables";
+
+.bs-table {
+  table {
+    margin-bottom: 0;
+
+    & > thead th {
+      user-select: none;
+
+      &.sortable {
+        cursor: pointer;
+        padding-right: 2em;
+        position: relative;
+
+        &:before, &:after {
+          position: absolute;
+          font-size: 8px;
+          right: 1em;
+          line-height: 1.5;
+          top: 50%;
+          opacity: .4;
+        }
+
+        &:before {
+          content: '▲';
+          margin-top: -9px;
+        }
+
+        &:after {
+          content: '▼';
+          margin-top: -2px;
+        }
+      }
+
+      &.sortable--asc:before {
+        opacity: 0.9;
+      }
+
+      &.sortable--desc:after {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  &__pagination {
+    display: block;
+    margin-top: 20px;
+  }
+}

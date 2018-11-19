@@ -1,0 +1,31 @@
+<div class="app-sidebar col-12 col-lg-auto mb-3" style="width: 200px">
+  <div #content>
+    <ng-content></ng-content>
+  </div>
+  <div *ngIf="content.children.length == 0">
+    <div class="card p-3">
+      <e-navlist [activeBg]="true">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link px-2" routerLink="/pages/overview" routerLinkActive="active">
+              <i class="fa fa-fw fa-bar-chart mr-1"></i>
+              <span>Overview</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2" routerLink="/pages/users" routerLinkActive="active">
+              <i class="fa fa-fw fa-clone mr-1"></i>
+              <span>CRUD</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2" routerLink="/pages/settings" routerLinkActive="active">
+              <i class="fa fa-fw fa-cog mr-1"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+      </e-navlist>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,110 @@
+e-select ng-select > div {
+  background-color: #fff;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  outline: 0;
+}
+
+e-select ng-select > div.open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+e-select ng-select > div > div.single {
+  height: 2.25rem;
+}
+
+e-select ng-select > div > div.single > div.value,
+e-select ng-select > div > div.single > div.placeholder {
+  padding: 0 0.75rem;
+  line-height: 2.25rem;
+}
+
+e-select ng-select > div > div.single > div.placeholder {
+  color: #6c757d;
+}
+
+e-select ng-select > div > div.single > div.toggle,
+e-select ng-select > div > div.single > div.clear {
+  color: #868e96;
+  line-height: 2.25rem;
+}
+
+e-select ng-select > div > div.single > div.toggle:hover,
+e-select ng-select > div > div.single > div.clear:hover {
+  background-color: transparent;
+  color: #495057;
+}
+
+e-select ng-select > div > div.single > div.toggle {
+  font-size: 11px;
+}
+
+e-select ng-select > div > div.single > div.clear {
+  font-size: 14px;
+}
+
+e-select ng-select > div > div.multiple {
+  min-height: 2.25rem;
+  align-items: flex-start;
+  padding-bottom: .38em;
+}
+
+e-select ng-select > div > div.multiple > div.option {
+  line-height: 1;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  position: relative;
+  background-color: #f8f9fa;
+  border-radius: .25em;
+  font-size: 75%;
+  color: #6c757d;
+  padding: 0.38em calc(.565em + 18px) 0.38em 0.565em;
+  margin: .375rem .375rem 0 0;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+e-select ng-select > div > div.multiple > div.option span.deselect-option {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 18px;
+  line-height: 18px;
+  font-size: 8px;
+  color: #6c757d;
+  text-align: center;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+e-select ng-select > div > div.multiple > div.option span.deselect-option:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+e-select ng-select select-dropdown > div {
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  overflow: hidden;
+  z-index: 2;
+}
+
+e-select ng-select select-dropdown > div .filter {
+  padding: 6px;
+}
+
+e-select ng-select select-dropdown > div .filter input {
+  border-radius: 3px;
+}
+
+e-select ng-select select-dropdown > div .filter input:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+e-select ng-select select-dropdown > div .options ul li {
+  padding: 6px 0.75rem;
+}

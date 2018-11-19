@@ -1,0 +1,222 @@
+<div class="container">
+  <div class="e-content">
+    <div class="row">
+      <div class="col-12 mt-3">
+        <div class="mb-3">
+          <navbar-default></navbar-default>
+        </div>
+        <div class="mb-3">
+          <navbar-nav-in-center></navbar-nav-in-center>
+        </div>
+        <div class="mb-3">
+          <navbar-brand-in-center></navbar-brand-in-center>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3 mb-3">
+        <div class="d-flex justify-content-between">
+          <div class="card p-3" style="flex-grow: 1;">
+            <navlist-active-bg></navlist-active-bg>
+          </div>
+          <div class="card py-3 px-2 ml-3">
+            <navlist-active-bg-tooltips></navlist-active-bg-tooltips>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-7 col-lg-3 col-xl-2 mb-3">
+        <navlist-active-bold></navlist-active-bold>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-5 col-xl-7">
+        <div class="mb-3">
+          <tabs-nested></tabs-nested>
+        </div>
+        <div class="mb-3">
+          <navline-arrow></navline-arrow>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-lg-4 col-xl-5 mb-3">
+        <div class="mb-3" style="padding-top: 1px">
+          <tabs-default></tabs-default>
+        </div>
+        <table-basic></table-basic>
+      </div>
+      <div class="col-md-12 col-lg-8 col-xl-7 mb-3">
+        <table-advanced></table-advanced>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-5">
+        <div class="row">
+          <div class="col">
+            <div class="mb-3">
+              <e-metric [title]="'Users'" [value]="3200 | number" icon="fa-user"></e-metric>
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <e-metric [title]="'Tickets'" [value]="1300 | number" icon="fa-tag"></e-metric>
+            </div>
+          </div>
+          <div class="col d-none d-lg-block">
+            <div class="mb-3">
+              <e-metric [title]="'Income'" [value]="8400 | number" icon="fa-usd"></e-metric>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-sm-6 col-lg-12 col-xl-6 mb-3">
+            <income-trend></income-trend>
+          </div>
+          <div class="col col-sm-6 col-lg-12 col-xl-6 mb-3">
+            <outcome-trend></outcome-trend>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-7">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-12 col-xl-6 mb-3">
+            <e-panel title="Donut Chart">
+              <chart-donut [height]="223"></chart-donut>
+            </e-panel>
+          </div>
+          <div class="col-12 col-md-6 col-lg-12 col-xl-6 mb-3">
+            <e-panel title="Horizontal Bar">
+              <chart-bar-horizontal-dual [height]="223"></chart-bar-horizontal-dual>
+            </e-panel>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <e-panel title="Area Chart">
+          <div head>
+            <div class="h6 font-weight-bold text-center mb-3">Area Chart</div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-10">
+              <chart-area-triple [height]="250"></chart-area-triple>
+            </div>
+            <div class="col-12 col-lg-2">
+              <div class="h-100 d-flex flex-row flex-wrap justify-content-center flex-lg-column pt-3">
+                <div class="px-3 py-1 py-md-0 text-center">
+                  <div class="h4 m-0">$1,200</div>
+                  <div class="text-muted">
+                    <small>Income</small>
+                  </div>
+                </div>
+                <hr class="w-100 d-none d-lg-block">
+                <div class="px-3 py-1 py-md-0 text-center">
+                  <div class="h4 m-0">$3,800</div>
+                  <div class="text-muted">
+                    <small>Outcome</small>
+                  </div>
+                </div>
+                <hr class="w-100 d-none d-lg-block">
+                <div class="px-3 py-1 py-md-0 text-center">
+                  <div class="h4 m-0">$5,000</div>
+                  <div class="text-muted">
+                    <small>Turnover</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </e-panel>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-6 col-lg-3 col-xl-3 mb-3">
+        <panel-login-form></panel-login-form>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+        <div class="card">
+          <datepicker-inline></datepicker-inline>
+        </div>
+      </div>
+      <div class="col-12 col-md-12 col-lg-5 col-xl-6 mb-3">
+        <e-panel [title]="'Form Controls'" [subtitle]="'Custom Plugins'">
+          <form class="mt-3">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div class="input-group flex-nowrap">
+                    <span class="input-group-prepend">
+                      <span class="input-group-text flex-column">
+                        <div class="fa-fw position-relative" style="background-color: inherit; flex: 1;">
+                          <i class="fa fa-fw fa-calendar-o position-absolute" style="left: -17%; top: 0;"></i>
+                          <i class="fa fa-fw fa-clock-o position-absolute" style="left: 17%; bottom: 0; background-color: inherit;"></i>
+                        </div>
+                      </span>
+                    </span>
+                    <datepicker-datetime></datepicker-datetime>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group flex-nowrap">
+                    <span class="input-group-prepend">
+                      <span class="input-group-text flex-column">
+                        <div class="position-relative fa-fw" style="background-color: inherit; flex: 1;">
+                          <i class="fa fa-fw fa-calendar-o position-absolute" style="left: -17%; top: 0;"></i>
+                          <i class="fa fa-fw fa-calendar position-absolute" style="left: 17%; bottom: 0; background-color: inherit;"></i>
+                        </div>
+                      </span>
+                    </span>
+                    <datepicker-range></datepicker-range>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group flex-nowrap">
+                    <span class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="fa fa-fw fa-clock-o"></i>
+                      </span>
+                    </span>
+                    <datepicker-time></datepicker-time>
+                  </div>
+                </div>
+                <div class="form-group mb-md-0">
+                  <div class="input-group flex-nowrap">
+                    <span class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="fa fa-fw fa-calendar"></i>
+                      </span>
+                    </span>
+                    <datepicker-date></datepicker-date>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <select-single></select-single>
+                </div>
+                <div class="form-group">
+                  <select-multiple></select-multiple>
+                </div>
+                <div class="form-group mb-0">
+                  <div style="margin-bottom: 6px;">
+                    <div class="mb-1">
+                      <e-slider [value]="50"></e-slider>
+                    </div>
+                    <e-slider [value]="[25, 75]"></e-slider>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <div class="mr-1" style="margin: 6px 0;">
+                      <e-toggle [value]="true"></e-toggle>
+                    </div>
+                    <div style="margin: 6px 0;">
+                      <e-toggle [value]="false"></e-toggle>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </e-panel>
+      </div>
+    </div>
+  </div>
+</div>

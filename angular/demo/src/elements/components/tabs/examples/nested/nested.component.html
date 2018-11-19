@@ -1,0 +1,71 @@
+<div class="card px-3">
+  <e-tabs nested={{true}}>
+    <ngb-tabset>
+      <ngb-tab title="Home">
+        <ng-template ngbTabContent>
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="" class="nav-link" (click)="$event.preventDefault()">
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link" (click)="$event.preventDefault()">
+                <span>Friends</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link" (click)="$event.preventDefault()">
+                <span>News</span>
+              </a>
+            </li>
+          </ul>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="Bookmarks">
+        <ng-template ngbTabContent>
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="" class="nav-link" (click)="$event.preventDefault()">
+                <span>Posts</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link" (click)="$event.preventDefault()">
+                <span>People</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link" (click)="$event.preventDefault()">
+                <span>Documents</span>
+              </a>
+            </li>
+          </ul>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab>
+        <ng-template ngbTabTitle>Messages <span class='badge badge-light ml-1'>2</span></ng-template>
+        <ng-template ngbTabContent>
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="" class="nav-link" (click)="$event.preventDefault()">
+                <span>Inbox</span>
+                <span class="badge badge-light">2</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link" (click)="$event.preventDefault()">
+                <span>Sent</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link" (click)="$event.preventDefault()">
+                <span>Drafts</span>
+              </a>
+            </li>
+          </ul>
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset>
+  </e-tabs>
+</div>

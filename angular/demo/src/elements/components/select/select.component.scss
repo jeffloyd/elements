@@ -1,0 +1,120 @@
+@import "~bootstrap/scss/functions";
+@import "../../scss/bootstrap/functions";
+@import "~bootstrap/scss/variables";
+@import "../../scss/bootstrap/variables";
+@import "~bootstrap/scss/mixins/forms";
+
+$innerHeight: ($input-btn-padding-y * 2) + ($font-size-base * $input-btn-line-height);
+$borders: 2 * $input-btn-border-width;
+$height: calc(#{$innerHeight} + #{$borders});
+
+e-select ng-select {
+  & > div {
+    background-color: $white;
+    color: $input-color;
+    border: $input-btn-border-width solid $input-border-color;
+    border-radius: $input-border-radius;
+    outline: 0;
+
+    &.open {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+
+    & > div.single {
+      height: $innerHeight;
+
+      & > div.value,
+      & > div.placeholder {
+        padding: 0 $input-padding-x;
+        line-height: $innerHeight;
+      }
+
+      & > div.placeholder {
+        color: $input-placeholder-color;
+      }
+
+      & > div.toggle,
+      & > div.clear {
+        color: #868e96;
+        line-height: $innerHeight;
+
+        &:hover {
+          background-color: transparent;
+          color: #495057;
+        }
+      }
+
+      & > div.toggle {
+        font-size: 11px;
+      }
+
+      & > div.clear {
+        font-size: 14px;
+      }
+    }
+
+    & > div.multiple {
+      min-height: $innerHeight;
+      align-items: flex-start;
+      padding-bottom: .38em;
+
+      & > div.option {
+        line-height: 1;
+        display: inline-flex;
+        flex-direction: row-reverse;
+        position: relative;
+
+        background-color: map-get($theme-colors, 'light');
+        border-radius: .25em;
+        font-size: 75%;
+        color: $gray-600;
+        padding: .38em calc(.565em + 18px) .38em .565em;
+        margin: .375rem .375rem 0 0;
+        border-color: rgba(0, 0, 0, 0.10);
+
+        span.deselect-option {
+          position: absolute;
+          right: 0;
+          top: 0;
+          height: 100%;
+          width: 18px;
+          line-height: 18px;
+          font-size: 8px;
+          color: $gray-600;
+          text-align: center;
+          border-left: 1px solid rgba(0, 0, 0, 0.1);
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+          }
+        }
+      }
+    }
+  }
+
+  select-dropdown {
+    & > div {
+      border-bottom-left-radius: $input-border-radius;
+      border-bottom-right-radius: $input-border-radius;
+      overflow: hidden;
+      z-index: 2;
+
+      .filter {
+        padding: 6px;
+
+        input {
+          border-radius: 3px;
+          @include form-control-focus();
+        }
+      }
+
+      .options {
+        ul li {
+          padding: 6px $input-padding-x;
+        }
+      }
+    }
+  }
+}
